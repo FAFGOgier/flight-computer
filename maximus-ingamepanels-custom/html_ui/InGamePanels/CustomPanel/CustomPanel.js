@@ -87,12 +87,18 @@ class IngamePanelCustomPanel extends TemplateElement {
         this.m_Footer = document.querySelector("#Footer");
         this.m_Footer.classList.add("hidden");
 
-        if (this.ingameUi) {
+        if (this.m_mainDisplay) {
+            this.m_mainDisplay.textContent = "Demo"
+        }
+
+        //document.querySelector("#CustomPanelWrap").textContent = "Custom panel Wrap"
+        
+        if (this.ingameU && false) {
             this.ingameUi.addEventListener("panelActive", (e) => {
                 console.log('panelActive');
                 self.panelActive = true;
                 if (self.iframeElement) {
-                    self.iframeElement.src = 'https://www.ipify.org/';
+                    //self.iframeElement.src = 'https://www.ipify.org/';
                 }
             });
             this.ingameUi.addEventListener("panelInactive", (e) => {

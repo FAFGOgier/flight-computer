@@ -1,4 +1,16 @@
-# msfs2020-toolbar-window-template
+# MSFS 2020 Analog Flight Computer
+
+The idea is to provide a flight computer usable in VR.
+
+It's still a projet in its infancy (a first iteration will probably be form-based).
+The goal, however, is to provide an analog computer.
+
+First, for Wind correction, and then (perhaps) for other computations.
+
+
+The base is provided by https://github.com/bymaximus/msfs2020-toolbar-window-template
+
+
 Microsoft FlightSimulator 2020 Toolbar Extra Window Template, this example loads UI window with ipify.org website SINCE SKYVECTOR is now blocking their website being loaded from iframe “X-Frame-Options“ = “SAMEORIGIN“.
 
 
