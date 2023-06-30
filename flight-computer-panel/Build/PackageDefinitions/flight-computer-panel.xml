@@ -1,0 +1,22 @@
+<AssetPackage Name="flight-computer-panel" Version="2.0.0">
+	<ItemSettings>
+		<ContentType>SPB</ContentType>
+		<Title>flight-computer-panel</Title>
+		<Manufacturer>FAFG_Ogier</Manufacturer>
+		<Creator>FAFG_Ogier</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<AssetGroups>
+		<AssetGroup Name="flight-computer-panel">
+			<Type>SPB</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\</AssetDir>
+			<OutputDir>Build\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
