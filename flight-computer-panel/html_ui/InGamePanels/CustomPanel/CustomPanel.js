@@ -93,6 +93,7 @@ class IngamePanelCustomPanel extends TemplateElement {
 
         //document.querySelector("#CustomPanelWrap").textContent = "Custom panel Wrap"
         
+        document.getElementById("svgpict").src= "dessin.svg"
         if (this.ingameU && false) {
             this.ingameUi.addEventListener("panelActive", (e) => {
                 console.log('panelActive');
