@@ -1,7 +1,11 @@
-<Project Version="2" Name="flight-computer-panel" FolderName="Packages">
+<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" Name="flight-computer-panel" FolderName="Packages" PublishingGroupFolderName="PublishingGroupsContent" MetadataFolderName="PackagesMetadata" PublishingGroupMetadataFolderName="PublishingGroupsMetadata">
 	<OutputDirectory>.</OutputDirectory>
 	<TemporaryOutputDirectory>_Temp</TemporaryOutputDirectory>
+	<PublishingGroupTemporaryOutputDirectory>_PublishingGroupInt</PublishingGroupTemporaryOutputDirectory>
 	<Packages>
 		<Package>PackageDefinitions\flight-computer-panel.xml</Package>
 	</Packages>
+	<PublishingGroups/>
 </Project>
+

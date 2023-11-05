@@ -1,4 +1,4 @@
-class IngamePanelCustomPanel extends TemplateElement {
+class FlightComputerPanel extends TemplateElement {
     constructor() {
         super(...arguments);
 
@@ -79,7 +79,7 @@ class IngamePanelCustomPanel extends TemplateElement {
         var self = this;
         this.ingameUi = this.querySelector('ingame-ui');
 
-        this.iframeElement = document.getElementById("CustomPanelIframe");
+        this.iframeElement = document.getElementById("FlightComputerPanelIframe");
 
         this.m_MainDisplay = document.querySelector("#MainDisplay");
         this.m_MainDisplay.classList.add("hidden");
@@ -161,5 +161,5 @@ class IngamePanelCustomPanel extends TemplateElement {
 
     }
 }
-window.customElements.define("ingamepanel-custom", IngamePanelCustomPanel);
+window.customElements.define("ingamepanel-custom", FlightComputerPanel);
 checkAutoload();

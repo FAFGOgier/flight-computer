@@ -2,68 +2,58 @@
   "content": [
     {
       "path": ".gitignore",
-      "size": 2,
-      "date": 133325944758242522
-    },
-    {
-      "path": "MSFSLayoutGenerator.exe",
-      "size": 364544,
-      "date": 133381298403776112
+      "size": 33,
+      "date": 133382307433580297
     },
     {
       "path": "Build/flight-computer-panel.xml",
-      "size": 278,
-      "date": 133325945272844609
-    },
-    {
-      "path": "Build/icon.png",
-      "size": 12958,
-      "date": 133325937001785569
+      "size": 589,
+      "date": 133382352889938041
     },
     {
       "path": "Build/PackageDefinitions/flight-computer-panel.xml",
-      "size": 632,
-      "date": 133325945858509269
+      "size": 627,
+      "date": 133382352889938041
     },
     {
       "path": "Build/Packages/flight-computer-panel/layout.json",
       "size": 135,
-      "date": 133325946286255910
+      "date": 133382355369656286
     },
     {
       "path": "Build/Packages/flight-computer-panel/manifest.json",
       "size": 312,
-      "date": 133325974993822813
+      "date": 133382355369656286
     },
     {
       "path": "Build/Packages/flight-computer-panel/Build/flight-computer-panel.spb",
-      "size": 692,
-      "date": 133325946286231114
+      "size": 712,
+      "date": 133382355369641386
     },
     {
       "path": "Build/PackageSources/flight-computer-panel.xml",
-      "size": 537,
-      "date": 133325937001780900
+      "size": 569,
+      "date": 133382355221896799
     },
     {
       "path": "Build/_Temp/_TimeStampID.xml",
       "size": 143,
-      "date": 133325946282154302
+      "date": 133382353975343398
     },
     {
       "path": "Build/_Temp/_metadata/flight-computer-panel/flight-computer-panel.xml",
-      "size": 249,
-      "date": 133325946286245989
+      "size": 273,
+      "date": 133382355369651322
     },
     {
       "path": "Build/_Temp/_timestamps/Output_0/flight-computer-panel/flight-computer-panel.xml",
       "size": 95,
-      "date": 133325946286236342
+      "date": 133382355369646491
     },
     {
       "path": "Build/_Temp/_timestamps/Output_0/flight-computer-panel/flight-computer-panel_output.xml",
-      "size": 202,
-      "date": 133325946286241029
+      "size": 379,
+      "date": 133382355369651322
     },
     {
       "path": "html_ui/icons/ICON_TOOLBAR_MAXIMUS_CUSTOM_PANEL.svg",
@@ -71,29 +61,29 @@
       "date": 133315746261240922
     },
     {
-      "path": "html_ui/InGamePanels/CustomPanel/capture.PNG",
+      "path": "html_ui/InGamePanels/FlightComputerPanel/capture.PNG",
       "size": 16179,
       "date": 133325966437115262
     },
     {
-      "path": "html_ui/InGamePanels/CustomPanel/CustomPanel.css",
-      "size": 1594,
-      "date": 133315746261235963
-    },
-    {
-      "path": "html_ui/InGamePanels/CustomPanel/CustomPanel.html",
-      "size": 4381,
-      "date": 133325970962961586
-    },
-    {
-      "path": "html_ui/InGamePanels/CustomPanel/CustomPanel.js",
-      "size": 5989,
-      "date": 133325964208586804
-    },
-    {
-      "path": "html_ui/InGamePanels/CustomPanel/dessin.svg",
+      "path": "html_ui/InGamePanels/FlightComputerPanel/dessin.svg",
       "size": 2120,
       "date": 133325938162868559
+    },
+    {
+      "path": "html_ui/InGamePanels/FlightComputerPanel/FlightComputerPanel.css",
+      "size": 1705,
+      "date": 133382332345421909
+    },
+    {
+      "path": "html_ui/InGamePanels/FlightComputerPanel/FlightComputerPanel.html",
+      "size": 4486,
+      "date": 133382331709438752
+    },
+    {
+      "path": "html_ui/InGamePanels/FlightComputerPanel/FlightComputerPanel.js",
+      "size": 6002,
+      "date": 133382326531274860
     },
     {
       "path": "html_ui/Textures/Menu/toolbar/ICON_TOOLBAR_MAXIMUS_CUSTOM_PANEL.svg",
@@ -102,8 +92,8 @@
     },
     {
       "path": "InGamePanels/flight-computer-panel.spb",
-      "size": 692,
-      "date": 133325946286231114
+      "size": 712,
+      "date": 133382355369641386
     }
   ]
 }

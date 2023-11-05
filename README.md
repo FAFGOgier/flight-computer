@@ -11,7 +11,9 @@ First, for Wind correction, and then (perhaps) for other computations.
 The base is provided by https://github.com/bymaximus/msfs2020-toolbar-window-template
 
 
-Microsoft FlightSimulator 2020 Toolbar Extra Window Template, this example loads UI window with ipify.org website SINCE SKYVECTOR is now blocking their website being loaded from iframe “X-Frame-Options“ = “SAMEORIGIN“.
+
+As I wasn't able to figure out a reasonable workflow in MSFS, the folder RAWHTML
+contains a simple HTML/JS version of the system, which can be edited without even starting MSFS.
 
 
 To build the SPB if you have changed UI panel template definition run `build.bat` or manually

@@ -1,37 +1,49 @@
 ﻿/** This mixin makes a single line element fit exactly on the Roboto font for easier integration. */
-ingame-ui#CustomPanel {
+ingame-ui#FlightComputerPanel {
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content: center;
   height:100% !important;
   width: 100% !important;
-  /*border: 2px solid blue !important;*/
 }
-ingame-ui#CustomPanel #CustomPanelWrap {
+
+
+ingame-ui#FlightComputerPanel #Main {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0;
+  min-width: 0;
+  overflow:hidden;
+  background-color: chartreuse;
+}
+
+ingame-ui#FlightComputerPanel #FlightComputerPanelWrap {
   display: flex;
   flex-direction: column;
   width: 100% !important;
   height: 100% !important;
-  /*border: 2px solid red !important;*/
   min-height: 0;
   min-width: 0;
   overflow:hidden;
   align-items: stretch !important;
   flex: 1 1 auto !important;
 }
-ingame-ui#CustomPanel #CustomPanelWrap #CustomPanelIframe {
+
+ingame-ui#FlightComputerPanel #FlightComputerPanelWrap #FlightComputerPanelIframe {
   flex: 1 1 auto !important;
   border: 0;
 }
-ingame-ui#CustomPanel #MainDisplay.hidden {
+
+ingame-ui#FlightComputerPanel #MainDisplay.hidden {
   display: none;
 }
-ingame-ui#CustomPanel #Footer.hidden {
+
+ingame-ui#FlightComputerPanel #Footer.hidden {
   display: none;
 }
-ingame-ui#CustomPanel .ingameUiContent {
-  /*border: 2px solid green !important;*/
+
+ingame-ui#FlightComputerPanel .ingameUiContent {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
@@ -42,8 +54,8 @@ ingame-ui#CustomPanel .ingameUiContent {
   align-items: stretch !important;
   flex: 1 1 auto !important;
 }
-ingame-ui#CustomPanel .ingameUiWrapper {
-  /*border: 2px solid yellow !important;*/
+
+ingame-ui#FlightComputerPanel .ingameUiWrapper {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;

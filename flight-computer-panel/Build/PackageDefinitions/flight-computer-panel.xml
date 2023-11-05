@@ -1,6 +1,7 @@
-<AssetPackage Name="flight-computer-panel" Version="2.0.0">
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="2.0.0">
 	<ItemSettings>
-		<ContentType>SPB</ContentType>
+		<ContentType>UNKNOWN</ContentType>
 		<Title>flight-computer-panel</Title>
 		<Manufacturer>FAFG_Ogier</Manufacturer>
 		<Creator>FAFG_Ogier</Creator>
@@ -20,3 +21,4 @@
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
+
