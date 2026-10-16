@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flight computer core tests</title>
+<style>
+  body { font: 14px/1.4 monospace; margin: 1em; }
+  .ok { color: #070; } .fail { color: #b00; font-weight: bold; }
+</style>
+</head>
+<body>
+<h3>core.js / units.js tests</h3>
+<pre id="out"></pre>
+<script src="../flight-computer-panel/html_ui/InGamePanels/FlightComputerPanel/fc/core.js"></script>
+<script src="../flight-computer-panel/html_ui/InGamePanels/FlightComputerPanel/fc/units.js"></script>
+<script>
+var core = FC.core, units = FC.units, failures = 0, out = document.getElementById('out');
+function check(name, actual, expected, tol) {
+    var ok = Math.abs(actual - expected) <= (tol === undefined ? 1e-6 : tol);
+    if (!ok) { failures++; }
+    out.innerHTML += '<span class="' + (ok ? 'ok' : 'fail') + '">' + (ok ? 'ok   ' : 'FAIL ') + name +
+        ' = ' + actual + (ok ? '' : ' (expected ' + expected + ')') + '</span>\n';
+}
+
+// Log scale
+check('angle of 10', core.valueToAngle(10), 0);
+check('angle of 100 folds to 0', core.valueToAngle(100), 0, 1e-9);
+check('angle of 31.6228', core.valueToAngle(31.6227766), 180, 1e-6);
+check('value at 180deg', core.angleToValue(180), 31.6227766, 1e-6);
+check('roundtrip 73', core.angleToValue(core.valueToAngle(73)), 73, 1e-9);
+check('ratio 2 -> 108.37deg', core.ratioToAngle(2), 108.3708, 1e-3);
+check('ratio 0.5 -> 251.63deg', core.ratioToAngle(0.5), 251.6292, 1e-3);
+
+// Time / speed / distance: 100 NM at 120 kt = 50 min
+var spdAngle = core.valueToAngle(120) - core.valueToAngle(60);
+check('inner disc for 120 kt', core.angleToValue(core.valueToAngle(100) - spdAngle), 50, 1e-9);
+check('timeMinutes 100NM@120kt', core.timeMinutes(100, 120), 50);
+out.innerHTML += (core.formatHM(125) === '2:05' ? '<span class="ok">ok   ' : (failures++, '<span class="fail">FAIL ')) + 'formatHM(125) = ' + core.formatHM(125) + '</span>\n';
+
+// Units
+check('10 NM -> km', units.convert('distance', 'nm', 'km', 10), 18.52, 1e-3);
+check('100 kt -> km/h', units.convert('speed', 'kt', 'kmh', 100), 185.2, 1e-1);
+check('100 kg -> lb', units.convert('mass', 'kg', 'lb', 100), 220.462, 1e-2);
+check('10 US gal -> L', units.convert('volume', 'usg', 'l', 10), 37.854, 1e-2);
+check('1000 ft -> m', units.convert('height', 'ft', 'm', 1000), 304.8, 1e-1);
+check('1013.25 hPa -> inHg', units.convert('pressure', 'hpa', 'inhg', 1013.25), 29.92, 1e-2);
+check('100 C -> F', units.cToF(100), 212);
+check('-40 F -> C', units.fToC(-40), -40);
+
+// Wind triangle
+var w = core.windTriangle(100, 0, 90, 20);
+check('WCA 100/0/090@20', w.wca, 11.5370, 1e-3);
+check('GS 100/0/090@20', w.gs, 97.980, 1e-3);
+check('heading', w.heading, 11.537, 1e-3);
+w = core.windTriangle(100, 0, 0, 20);
+check('headwind GS', w.gs, 80);
+w = core.windTriangle(100, 90, 270, 30);
+check('tailwind GS', w.gs, 130);
+w = core.windTriangle(100, 90, 0, 50);
+check('wind from left: WCA', w.wca, -30, 1e-6);
+w = core.windTriangle(100, 90, 180, 50);
+check('wind from right: WCA', w.wca, 30, 1e-6);
+check('WCA unreachable -> null', core.windTriangle(50, 0, 90, 80) === null ? 1 : 0, 1);
+var back = core.windFromTrack(100, 11.537, 97.980, 0);
+check('wind from track: dir', core.norm180(back.from - 90), 0, 0.05);
+check('wind from track: speed', back.speed, 20, 0.05);
+
+// Airspeed
+var a = core.airspeed(100, 0, 15);
+check('sea level ISA: TAS=CAS', a.tas, 100, 1e-6);
+check('sea level ISA: DA=0', a.densityAlt, 0, 1e-3);
+a = core.airspeed(120, 8000, 15 - 1.98122 * 8);
+check('8000ft ISA density alt', a.densityAlt, 8000, 5);
+check('8000ft ISA TAS ~ 120*1.14', a.tas, 120 * 1.14, 3);
+a = core.airspeed(150, 0, 35);
+check('hot day ISA dev', a.isaDev, 20, 1e-9);
+check('hot sea level (35C) density alt', a.densityAlt, 2200, 150);
+check('mach at 250 KCAS 35000 ft', core.airspeed(250, 35000, -54.3).mach, 0.74, 0.02);
+
+out.innerHTML += '\n' + (failures ? '<span class="fail">' + failures + ' FAILED</span>' : '<span class="ok">ALL PASSED</span>');
+document.title = failures ? 'FAILED' : 'PASSED';
+</script>
+</body>
+</html>

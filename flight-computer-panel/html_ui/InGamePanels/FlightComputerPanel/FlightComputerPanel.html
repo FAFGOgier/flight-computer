@@ -1,15 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/SCSS/common.css" />
     <link rel="stylesheet" href="FlightComputerPanel.css" />
+    <link rel="stylesheet" href="fc/fc.css" />
 
     <script type="text/javascript" src="/JS/coherent.js"></script>
     <script type="text/javascript" src="/JS/common.js"></script>
 
-    <script type="text/javascript" src="/JS/debug.js"></script>
-    
     <script type="text/javascript" src="/JS/dataStorage.js"></script>
     <script type="text/javascript" src="/JS/buttons.js"></script>
     <script type="text/javascript" src="/JS/Services/ToolBarPanels.js"></script>
@@ -22,75 +21,22 @@
     <link rel="import" href="/templates/ingameUiHeader/ingameUiHeader.html" />
     <link rel="import" href="/templates/NewListButton/NewListButton.html" />
 
-    <script type="text/javascript" src="/JS/debug.js"></script>
+    <script type="text/javascript" src="fc/core.js"></script>
+    <script type="text/javascript" src="fc/units.js"></script>
+    <script type="text/javascript" src="fc/scales.js"></script>
+    <script type="text/javascript" src="fc/app.js"></script>
+    <script type="text/javascript" src="fc/face-calc.js"></script>
+    <script type="text/javascript" src="fc/face-wind.js"></script>
+    <script type="text/javascript" src="fc/main.js"></script>
     <script type="text/javascript" src="FlightComputerPanel.js"></script>
 </head>
 
 <body class="border-box">
     <ingamepanel-custom>
-        <ingame-ui id="FlightComputerPanel" panel-id="PANEL_CUSTOM_PANEL" title="" class="ingameUiFrame panelInvisible" content-fit="true" min-width="160" min-height="90">
+        <ingame-ui id="FlightComputerPanel" panel-id="PANEL_CUSTOM_PANEL" title="" class="ingameUiFrame panelInvisible" content-fit="true" min-width="360" min-height="260">
             <div id="main">
-                <!--<iframe id="FlightComputerPanelIframe" src=""></iframe>-->
-                <h1>Test en cours V1</h1>
-                <ul><li>un</li><li>deux</li></ul>
-                <button>bouton</button>
-                <p>un select :</p>
-                <select>
-                    <option>un</option>
-                    <option>deux</option>
-                    <option>trois</option>
-                </select>
-                <p>une image svg <img id="svgpict" src="dessin.svg" alt="" srcset="">
-                </p>
-                <p>une image png <img src="capture.PNG" alt="" srcset="">
-                </p>
-                <p>SVG inline 
-                    <svg
-                    xmlns:dc="http://purl.org/dc/elements/1.1/"
-                    xmlns:cc="http://creativecommons.org/ns#"
-                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                    xmlns:svg="http://www.w3.org/2000/svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                    sodipodi:docname="dessin.svg"
-                    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-                    id="svg8"
-                    version="1.1"
-                    viewBox="0 0 20 20"
-                    height="20mm"
-                    width="20mm">
-                   <defs
-                      id="defs2" />
-                  
-                   <g
-                      id="layer1"
-                      inkscape:groupmode="layer"
-                      inkscape:label="Calque 1">
-                     <ellipse
-                        ry="7.3499122"
-                        rx="8.0180855"
-                        cy="10.824416"
-                        cx="10.156241"
-                        id="path10"
-                        style="opacity:1;fill:none;stroke-width:0.565;stop-color:#000000;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
-                     <path
-                        id="path835"
-                        d="M 4.8108515,13.898015 13.363476,6.4144686"
-                        style="fill:#ff0000;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-                   </g>
-                 </svg>
-
-                </p>
-                <p>Radio button <input type="radio" name="a"/> <input type="radio" name="a"/></p>
-                <p>Check button <input type="checkbox"/></p>                
+                <div id="fc-root"></div>
             </div>
-            <section id="MainDisplay">
-                header
-            </section>
-            <section id="Footer">
-                footer
-            </section>
         </ingame-ui>
     </ingamepanel-custom>
 </body>
