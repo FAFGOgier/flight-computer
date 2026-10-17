@@ -28,13 +28,14 @@ This flight computer attempts to keep the spirit of the actual implements, while
 
 ## Workflow
 
-Note that if you build this package on your machine, you will need to edit the `.bat` files. They contain path wich are specific to my computer. Look for occurrences of `G:\` in the project.
-
+The `.bat` files use paths relative to their own location. The only machine-specific values are:
+- `FC_COMMUNITY`: your MSFS `Community` folder. `deploy.bat` defaults to my own path (near the top of the file), so edit that line or set the environment variable.
+- `MSFS_SDK`: the SDK folder, only needed by `build.bat` (the SDK installer sets it).
 
 
 - `flight-computer-panel/` is the MSFS package. The code lives in `html_ui/InGamePanels/FlightComputerPanel/fc/`: `core.js` (pure maths), `units.js`, `scales.js`, `app.js` (shell), `face-calc.js`, `face-wind.js`.
 - Test without MSFS: serve this folder over http (`python -m http.server 8765`) and open `dev/index.html` (the computer) or `dev/test.html` (maths tests, the title says PASSED or FAILED).
-- `deploy.bat stage` builds `dist\flight-computer-panel` (without `Build\`, with a fresh `layout.json` from `MSFSLayoutGenerator.exe`). `deploy.bat` also copies it to the Community folder (`FC_COMMUNITY`, default `G:\FS2020\MSFS2024\Community`).
+- `deploy.bat stage` builds `dist\flight-computer-panel` (without `Build\`, with a fresh `layout.json` from `MSFSLayoutGenerator.exe`). `deploy.bat` also copies it to the Community folder (`FC_COMMUNITY`, default set in `deploy.bat`).
 - If you change the panel definition (size, icon...), rebuild the SPB with `build.bat` (needs `MSFS_SDK`), it copies the result to `flight-computer-panel\InGamePanels`.
 
 ## Screenshots
