@@ -19,6 +19,7 @@
 .fc-bar {
     display: flex;
     flex: 0 0 auto;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6px;
@@ -53,13 +54,19 @@
     min-height: 0;
 }
 
+/* The SVG is taken out of the flow so that it can never push the side column over the dial:
+   the dial box gets its size from the flex layout only. */
 .fc-dial {
+    position: relative;
     flex: 1 1 60%;
     min-width: 0;
     min-height: 0;
 }
 
 .fc-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
     height: 100%;
@@ -90,7 +97,8 @@
 .fc-rowvalue { flex: 0 0 auto; min-width: 70px; margin-right: 4px; text-align: right; font-size: 20px; font-weight: bold; }
 .fc-step { min-width: 52px; font-size: 24px; padding: 0 8px; }
 
-@media (max-aspect-ratio: 1/1) {
-    .fc-main { flex-direction: column; }
-    .fc-side { flex: 0 0 auto; padding-left: 0; }
-}
+/* Portrait layout. Chosen by App.layout() from the size of the panel itself (a media query
+   looks at the viewport, which in MSFS is not reliably the panel when it first opens). */
+.fc-root.fc-portrait .fc-main { flex-direction: column; }
+.fc-root.fc-portrait .fc-dial { flex: 1 1 55%; min-height: 140px; }
+.fc-root.fc-portrait .fc-side { flex: 0 1 auto; min-width: 0; max-height: 50%; padding-left: 0; }

@@ -145,8 +145,34 @@
         document.addEventListener('mousemove', function (e) { self.onMove(e); });
         document.addEventListener('mouseup', function () { self.onUp(); });
         this.svgEl.addEventListener('wheel', function (e) { self.onWheel(e); });
+
+        this.watchSize();
     }
     FC.App = App;
+
+    // Pick the side-by-side or stacked layout from the panel's own size. MSFS may create the
+    // panel with a size that differs from the one it ends up with and does not always fire a
+    // resize event, so look at the size on resize events, a ResizeObserver when there is one,
+    // and a cheap timer as a safety net.
+    App.prototype.layout = function () {
+        var w = this.root.clientWidth, hgt = this.root.clientHeight;
+        if (!w || !hgt || (w === this.lastW && hgt === this.lastH)) { return; }
+        this.lastW = w;
+        this.lastH = hgt;
+        var portrait = w < hgt * 1.15 || w < 460;
+        this.root.className = 'fc-root' + (portrait ? ' fc-portrait' : '');
+    };
+
+    App.prototype.watchSize = function () {
+        var self = this;
+        function check() { self.layout(); }
+        check();
+        g.addEventListener('resize', check);
+        if (typeof g.ResizeObserver === 'function') {
+            try { new g.ResizeObserver(check).observe(this.root); } catch (e) { /* timer covers it */ }
+        }
+        setInterval(check, 300);
+    };
 
     App.prototype.addFace = function (face) {
         var self = this;
