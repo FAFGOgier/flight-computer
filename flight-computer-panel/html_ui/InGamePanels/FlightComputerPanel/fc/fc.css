@@ -78,6 +78,8 @@
 .fc-big { font-size: 24px; font-weight: bold; line-height: 1.25; }
 .fc-small { font-size: 14px; color: #b9c3cd; }
 .fc-arrow { color: #90caf9; }
+.fc-deg { display: inline-block; position: relative; top: -0.4em; width: 0.3em; height: 0.3em; margin: 0 0.05em; border: 0.09em solid currentColor; border-radius: 50%; }
+.fc-arrowsvg { vertical-align: middle; margin: 0 2px; }
 .fc-warn { color: #ffb74d; }
 .fc-hint { margin: 4px 2px; font-size: 13px; color: #b9c3cd; }
 .fc-panel { margin-bottom: 6px; }

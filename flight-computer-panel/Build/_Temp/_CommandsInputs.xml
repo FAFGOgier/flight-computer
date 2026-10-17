@@ -1,0 +1,8 @@
+<CommandsInputs>
+	<File Path="G:\FS2020\flight_computer\flight-computer\flight-computer-panel\Build\PackageSources\flight-computer-panel.xml" Failure="0">
+		<Package Name="flight-computer-panel" Failure="0">
+			<AssetGroup Name="flight-computer-panel"/>
+		</Package>
+	</File>
+</CommandsInputs>
+

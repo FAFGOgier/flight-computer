@@ -27,9 +27,15 @@
     }
     FC.h = h;
 
+    // The in-game font lacks U+2212 (minus), U+2014, U+2192 (arrow), U+00D7, U+00B7 and U+00B0:
+    // stay with ASCII, SVG and CSS.
+    // The font also lacks the degree sign: draw it in CSS.
+    FC.DEG = '<span class="fc-deg"></span>';
+    FC.ARROW = '<svg class="fc-arrowsvg" viewBox="0 0 20 10" width="20" height="10"><path d="M0 5H16M11 1L16 5L11 9" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+
     // About 3 significant digits, which is what a slide rule can honestly give.
     FC.fmt = function (v) {
-        if (!isFinite(v)) { return '—'; }
+        if (!isFinite(v)) { return '-'; }
         var a = Math.abs(v);
         if (a >= 100) { return String(Math.round(v)); }
         return String(parseFloat(v.toPrecision(3)));
@@ -102,13 +108,13 @@
         this.tabsEl = h('div', 'fc-tabs');
         bar.appendChild(this.tabsEl);
         var tools = h('div', 'fc-tools');
-        this.zoomOut = h('button', 'fc-btn', '−');
+        this.zoomOut = h('button', 'fc-btn', '-');
         this.zoomOut.title = 'Zoom out';
-        this.zoomLabel = h('span', 'fc-zoomlabel', '1×');
+        this.zoomLabel = h('span', 'fc-zoomlabel', '1x');
         this.zoomIn = h('button', 'fc-btn', '+');
         this.zoomIn.title = 'Zoom in';
         this.fineBtn = h('button', 'fc-btn fc-wide', 'Coarse');
-        this.fineBtn.title = 'Step size of the + / − buttons and the mouse wheel';
+        this.fineBtn.title = 'Step size of the + / - buttons and the mouse wheel';
         [this.zoomOut, this.zoomLabel, this.zoomIn, this.fineBtn].forEach(function (n) { tools.appendChild(n); });
         bar.appendChild(tools);
         root.appendChild(bar);
@@ -191,7 +197,7 @@
             var el = h('div', 'fc-row');
             h('span', 'fc-rowlabel', row.label, el);
             var val = h('span', 'fc-rowvalue', '', el);
-            var minus = h('button', 'fc-btn fc-step', '−', el);
+            var minus = h('button', 'fc-btn fc-step', '-', el);
             var plus = h('button', 'fc-btn fc-step', '+', el);
             holdButton(minus, function () { row.step(-1, self.fine); self.update(); });
             holdButton(plus, function () { row.step(1, self.fine); self.update(); });
@@ -233,7 +239,7 @@
 
     App.prototype.applyView = function () {
         var f = this.active && this.active.focus ? this.active.focus() : { x: 0, y: 0 };
-        this.zoomLabel.textContent = ZOOMS[this.zoomIndex] + '×';
+        this.zoomLabel.textContent = ZOOMS[this.zoomIndex] + 'x';
         this.setView(this.zoomIndex === 0 ? 0 : f.x, this.zoomIndex === 0 ? 0 : f.y);
     };
 

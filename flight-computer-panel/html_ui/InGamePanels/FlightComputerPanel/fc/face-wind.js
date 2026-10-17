@@ -7,7 +7,7 @@
     var FC = g.FC = g.FC || {};
     var core = FC.core, svg = FC.svg, fmt = FC.fmt;
     var PLOT_R = 80, PLOT_SCALE_R = 78;
-    var RANGES = [100, 200, 400, 800];
+    var RANGES = [100, 200, 300, 400, 800];
 
     function pad3(v) {
         var n = Math.round(core.norm360(v)) % 360;
@@ -21,7 +21,7 @@
         this.tas = 120;
         this.windFrom = 330;
         this.windSpeed = 20;
-        this.range = 200;
+        this.range = 300;
     }
 
     WindFace.prototype.build = function (g0) {
@@ -131,11 +131,11 @@
         var self = this;
         function wrap(f) { return core.norm360(f); }
         return [
-            { label: 'Course (°)', value: function () { return pad3(self.course); },
+            { label: 'Course (deg)', value: function () { return pad3(self.course); },
               step: function (dir, fine) { self.course = wrap(self.course + dir * (fine ? 1 : 10)); } },
             { label: 'TAS (kt)', value: function () { return String(Math.round(self.tas)); },
               step: function (dir, fine) { self.tas = Math.max(20, self.tas + dir * (fine ? 1 : 10)); } },
-            { label: 'Wind from (°)', value: function () { return pad3(self.windFrom); },
+            { label: 'Wind from (deg)', value: function () { return pad3(self.windFrom); },
               step: function (dir, fine) { self.windFrom = wrap(self.windFrom + dir * (fine ? 1 : 10)); } },
             { label: 'Wind speed (kt)', value: function () { return String(Math.round(self.windSpeed)); },
               step: function (dir, fine) { self.windSpeed = Math.max(0, Math.min(self.range, self.windSpeed + dir * (fine ? 1 : 5))); } },
@@ -155,12 +155,12 @@
             return lines;
         }
         var side = t.wca > 0.05 ? ' right' : (t.wca < -0.05 ? ' left' : '');
-        lines.push('<div class="fc-big">HDG ' + pad3(t.heading) + '° <span class="fc-arrow">·</span> GS ' + Math.round(t.gs) + ' kt</div>');
-        lines.push('<div class="fc-small">WCA ' + Math.abs(t.wca).toFixed(1) + '°' + side + '</div>');
+        lines.push('<div class="fc-big">HDG ' + pad3(t.heading) + FC.DEG + ' <span class="fc-arrow">|</span> GS ' + Math.round(t.gs) + ' kt</div>');
+        lines.push('<div class="fc-small">WCA ' + Math.abs(t.wca).toFixed(1) + FC.DEG + side + '</div>');
         var head = (t.headwind >= 0 ? 'headwind ' : 'tailwind ') + Math.round(Math.abs(t.headwind)) + ' kt';
         var cross = Math.abs(t.crosswind) < 0.5 ? 'no crosswind' :
             'crosswind ' + Math.round(Math.abs(t.crosswind)) + ' kt from ' + (t.crosswind > 0 ? 'right' : 'left');
-        lines.push('<div class="fc-small">' + head + ' · ' + cross + '</div>');
+        lines.push('<div class="fc-small">' + head + ' | ' + cross + '</div>');
         return lines;
     };
 

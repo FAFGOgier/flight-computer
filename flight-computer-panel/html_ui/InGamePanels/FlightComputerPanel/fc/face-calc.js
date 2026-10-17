@@ -209,13 +209,13 @@
                 step: function (dir, fine) { self.tas.pa = Math.max(-1000, Math.min(35000, self.tas.pa + dir * (fine ? 100 : 1000))); self.setRatio(self.ratioForMode()); }
             });
             rows.push({
-                label: 'OAT (°C)', value: function () { return String(self.tas.oat); },
+                label: 'OAT (C)', value: function () { return String(self.tas.oat); },
                 step: function (dir, fine) { self.tas.oat = Math.max(-80, Math.min(60, self.tas.oat + dir * (fine ? 1 : 5))); self.setRatio(self.ratioForMode()); }
             });
         }
         if (this.mode === 'convert') {
             rows.push({
-                label: 'Temperature (°C)', value: function () { return self.tempC + ' = ' + fmt(FC.units.cToF(self.tempC)) + ' °F'; },
+                label: 'Temperature (C)', value: function () { return self.tempC + ' = ' + fmt(FC.units.cToF(self.tempC)) + ' F'; },
                 step: function (dir, fine) { self.tempC += dir * (fine ? 1 : 5); }
             });
         }
@@ -245,7 +245,7 @@
                 self.app.show(self);
             });
             var units = FC.units.categories[this.conv.cat].units;
-            h('div', 'fc-hint', 'From (inner disc)  →  To (outer scale)', panel);
+            h('div', 'fc-hint', 'From (inner disc)  ->  To (outer scale)', panel);
             // Picking the unit already used on the other side swaps to the first different one.
             function otherThan(id) {
                 for (var i = 0; i < units.length; i++) { if (units[i].id !== id) { return units[i].id; } }
@@ -280,7 +280,7 @@
         function big(html) { lines.push('<div class="fc-big">' + html + '</div>'); }
         function small(html) { lines.push('<div class="fc-small">' + html + '</div>'); }
         if (this.mode === 'time') {
-            big(fmt(O) + ' NM <span class="fc-arrow">→</span> ' + fmt(I) + ' min');
+            big(fmt(O) + ' NM <span class="fc-arrow">' + FC.ARROW + '</span> ' + fmt(I) + ' min');
             small('= ' + core.formatHM(I) + ' h:min at ' + fmt(this.rate) + ' kt');
             small('exact: ' + (O / this.rate * 60).toFixed(1) + ' min');
         } else if (this.mode === 'convert') {
@@ -288,9 +288,9 @@
             small('exact: ' + FC.fmt(I * FC.units.ratio(this.conv.cat, this.conv.from, this.conv.to)) + ' ' + n.outer);
         } else {
             var a = core.airspeed(I, this.tas.pa, this.tas.oat);
-            big('CAS ' + fmt(I) + ' <span class="fc-arrow">→</span> TAS ' + fmt(O) + ' kt');
-            small('exact: TAS ' + fmt(a.tas) + ' kt · Mach ' + a.mach.toFixed(2));
-            small('density altitude ' + Math.round(a.densityAlt / 10) * 10 + ' ft · ISA ' + (a.isaDev >= 0 ? '+' : '') + Math.round(a.isaDev) + '°C');
+            big('CAS ' + fmt(I) + ' <span class="fc-arrow">' + FC.ARROW + '</span> TAS ' + fmt(O) + ' kt');
+            small('exact: TAS ' + fmt(a.tas) + ' kt | Mach ' + a.mach.toFixed(2));
+            small('density altitude ' + Math.round(a.densityAlt / 10) * 10 + ' ft | ISA ' + (a.isaDev >= 0 ? '+' : '') + Math.round(a.isaDev) + FC.DEG + 'C');
         }
         return lines;
     };

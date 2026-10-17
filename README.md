@@ -33,15 +33,10 @@ The base is provided by https://github.com/bymaximus/msfs2020-toolbar-window-tem
 ![example2](example2.png)
 ![example3](example3.png)
 
-#
-## Please, if you like the source/my addons, consider making a donation to support me/keep development of this and new addons, any amount is welcome. I will buy MSFS2020 from steam since my current version is from a limited game pass access which will be ended. Thank you.
-<br/>
-<br/>
-<div align="center">
+## History
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LZH27QQ2ST64N)
+- I wrote a preliminary version of this flight computer in JS, and leave it as is for a while. Then, I asked Claude to finish the job and it did great.
 
-</div>
-<br/>
-<br/>
-<br/>
+## About the bymaximus package
+
+I have started working on this flight computer using a generic template for MSFS plugin by [Maximus](https://github.com/bymaximus/msfs2020-toolbar-window-template). You can go to the linked site and make a donation to him if you are happy with this plugin. 
