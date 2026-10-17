@@ -5,6 +5,11 @@ Target: MSFS 2024 (the panel is still a classic toolbar in-game panel).
 
 The base is provided by https://github.com/bymaximus/msfs2020-toolbar-window-template
 
+
+## Principles
+
+This flight computer attempts to keep the spirit of the actual implements, while being reasonably usable in VR. It means it's quite simplified, in particular for wind course correction and **TAS** computation.
+
 ## Faces
 
 **Calc** - fixed outer scale, rotating inner disc, hairline cursor. The disc always obeys
@@ -22,6 +27,11 @@ The base is provided by https://github.com/bymaximus/msfs2020-toolbar-window-tem
 - State (discs, mode, zoom, wind) is remembered between sessions.
 
 ## Workflow
+
+Note that if you build this package on your machine, you will need to edit the `.bat` files. They contain path wich are specific to my computer. Look for occurrences of `G:\` in the project.
+
+
+
 - `flight-computer-panel/` is the MSFS package. The code lives in `html_ui/InGamePanels/FlightComputerPanel/fc/`: `core.js` (pure maths), `units.js`, `scales.js`, `app.js` (shell), `face-calc.js`, `face-wind.js`.
 - Test without MSFS: serve this folder over http (`python -m http.server 8765`) and open `dev/index.html` (the computer) or `dev/test.html` (maths tests, the title says PASSED or FAILED).
 - `deploy.bat stage` builds `dist\flight-computer-panel` (without `Build\`, with a fresh `layout.json` from `MSFSLayoutGenerator.exe`). `deploy.bat` also copies it to the Community folder (`FC_COMMUNITY`, default `G:\FS2020\MSFS2024\Community`).
@@ -29,13 +39,13 @@ The base is provided by https://github.com/bymaximus/msfs2020-toolbar-window-tem
 
 ## Screenshots
 
-![example](example.png)
-![example2](example2.png)
-![example3](example3.png)
+![computation](capture01.png)
+
+![wind correction](capture02.png)
 
 ## History
 
-- I wrote a preliminary version of this flight computer in JS, and leave it as is for a while. Then, I asked Claude to finish the job and it did great.
+- I had written a preliminary version of this flight computer in JS, and leave it as is for a while. Then, I asked Claude to finish the job and it did great.
 
 ## About the bymaximus package
 

@@ -1,60 +1,336 @@
-<svg id="Titre" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 64.000000 64.000000">
-    <title>ICON_TOOLBAR_MAXIMUS_CUSTOM_PANEL</title>
-    <g id="HIGHLIGHT">
-        <circle cx="32" cy="32" r="31" fill="#1c2b3c" stroke="#FFFFFF" stroke-width="1"/>
-        <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
-            <circle cx="32" cy="32" r="30" stroke-width="2.4"/>
-            <circle cx="32" cy="32" r="19.5" stroke-width="2"/>
-            <path stroke-width="2.4" d="M32 10.5L32 4.5"/>
-            <path stroke-width="1.8" d="M36.25 7.87L36.78 4.92"/>
-            <path stroke-width="1.8" d="M40.38 8.98L41.41 6.16"/>
-            <path stroke-width="2.4" d="M42.75 13.38L45.75 8.18"/>
-            <path stroke-width="1.8" d="M47.75 13.23L49.68 10.93"/>
-            <path stroke-width="1.8" d="M50.77 16.25L53.07 14.32"/>
-            <path stroke-width="2.4" d="M50.62 21.25L55.82 18.25"/>
-            <path stroke-width="1.8" d="M55.02 23.62L57.84 22.59"/>
-            <path stroke-width="1.8" d="M56.13 27.75L59.08 27.22"/>
-            <path stroke-width="2.4" d="M53.5 32L59.5 32"/>
-            <path stroke-width="1.8" d="M56.13 36.25L59.08 36.78"/>
-            <path stroke-width="1.8" d="M55.02 40.38L57.84 41.41"/>
-            <path stroke-width="2.4" d="M50.62 42.75L55.82 45.75"/>
-            <path stroke-width="1.8" d="M50.77 47.75L53.07 49.68"/>
-            <path stroke-width="1.8" d="M47.75 50.77L49.68 53.07"/>
-            <path stroke-width="2.4" d="M42.75 50.62L45.75 55.82"/>
-            <path stroke-width="1.8" d="M40.38 55.02L41.41 57.84"/>
-            <path stroke-width="1.8" d="M36.25 56.13L36.78 59.08"/>
-            <path stroke-width="2.4" d="M32 53.5L32 59.5"/>
-            <path stroke-width="1.8" d="M27.75 56.13L27.22 59.08"/>
-            <path stroke-width="1.8" d="M23.62 55.02L22.59 57.84"/>
-            <path stroke-width="2.4" d="M21.25 50.62L18.25 55.82"/>
-            <path stroke-width="1.8" d="M16.25 50.77L14.32 53.07"/>
-            <path stroke-width="1.8" d="M13.23 47.75L10.93 49.68"/>
-            <path stroke-width="2.4" d="M13.38 42.75L8.18 45.75"/>
-            <path stroke-width="1.8" d="M8.98 40.38L6.16 41.41"/>
-            <path stroke-width="1.8" d="M7.87 36.25L4.92 36.78"/>
-            <path stroke-width="2.4" d="M10.5 32L4.5 32"/>
-            <path stroke-width="1.8" d="M7.87 27.75L4.92 27.22"/>
-            <path stroke-width="1.8" d="M8.98 23.62L6.16 22.59"/>
-            <path stroke-width="2.4" d="M13.38 21.25L8.18 18.25"/>
-            <path stroke-width="1.8" d="M13.23 16.25L10.93 14.32"/>
-            <path stroke-width="1.8" d="M16.25 13.23L14.32 10.93"/>
-            <path stroke-width="2.4" d="M21.25 13.38L18.25 8.18"/>
-            <path stroke-width="1.8" d="M23.62 8.98L22.59 6.16"/>
-            <path stroke-width="1.8" d="M27.75 7.87L27.22 4.92"/>
-            <path stroke-width="1.8" d="M35.24 19.93L36.27 16.06"/>
-            <path stroke-width="1.8" d="M40.84 23.16L43.67 20.33"/>
-            <path stroke-width="1.8" d="M44.07 28.76L47.94 27.73"/>
-            <path stroke-width="1.8" d="M44.07 35.24L47.94 36.27"/>
-            <path stroke-width="1.8" d="M40.84 40.84L43.67 43.67"/>
-            <path stroke-width="1.8" d="M35.24 44.07L36.27 47.94"/>
-            <path stroke-width="1.8" d="M28.76 44.07L27.73 47.94"/>
-            <path stroke-width="1.8" d="M23.16 40.84L20.33 43.67"/>
-            <path stroke-width="1.8" d="M19.93 35.24L16.06 36.27"/>
-            <path stroke-width="1.8" d="M19.93 28.76L16.06 27.73"/>
-            <path stroke-width="1.8" d="M23.16 23.16L20.33 20.33"/>
-            <path stroke-width="1.8" d="M28.76 19.93L27.73 16.06"/>
-            <path stroke-width="2.2" d="M28.31 36.73L50.78 7.97"/>
-        </g>
-        <circle cx="32" cy="32" r="3" fill="#FFFFFF" stroke="none"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Titre"
+   width="100%"
+   height="100%"
+   viewBox="0 0 64.000000 64.000000"
+   version="1.1"
+   sodipodi:docname="ICON_TOOLBAR_MAXIMUS_CUSTOM_PANEL.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs51" />
+  <sodipodi:namedview
+     id="namedview51"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="14.578125"
+     inkscape:cx="32"
+     inkscape:cy="33.303323"
+     inkscape:window-width="1920"
+     inkscape:window-height="1129"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="HIGHLIGHT" />
+  <title
+     id="title1">ICON_TOOLBAR_MAXIMUS_CUSTOM_PANEL</title>
+  <g
+     id="HIGHLIGHT"
+     style="display:inline">
+    <circle
+       cx="32"
+       cy="32"
+       r="31"
+       fill="#1c2b3c"
+       stroke="#ffffff"
+       stroke-width="1"
+       id="circle1"
+       style="display:inline;fill:#b3b3b3;stroke:#ffffff;stroke-opacity:1" />
+    <g
+       fill="none"
+       stroke="#ffffff"
+       stroke-linecap="round"
+       id="g51"
+       style="display:inline;stroke:#544c1d;stroke-opacity:1"
+       inkscape:label="g51">
+      <circle
+         cx="32"
+         cy="32"
+         r="30"
+         stroke-width="2.4"
+         id="circle2"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <circle
+         cx="32"
+         cy="32"
+         r="19.5"
+         stroke-width="2"
+         id="circle3"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 32,10.5 v -6"
+         id="path3"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 36.25,7.87 36.78,4.92"
+         id="path4"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 40.38,8.98 41.41,6.16"
+         id="path5"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 42.75,13.38 3,-5.2"
+         id="path6"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 47.75,13.23 1.93,-2.3"
+         id="path7"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 50.77,16.25 2.3,-1.93"
+         id="path8"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 50.62,21.25 5.2,-3"
+         id="path9"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 55.02,23.62 2.82,-1.03"
+         id="path10"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 56.13,27.75 2.95,-0.53"
+         id="path11"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 53.5,32 h 6"
+         id="path12"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 56.13,36.25 2.95,0.53"
+         id="path13"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 55.02,40.38 2.82,1.03"
+         id="path14"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 50.62,42.75 5.2,3"
+         id="path15"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 50.77,47.75 2.3,1.93"
+         id="path16"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 47.75,50.77 1.93,2.3"
+         id="path17"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 42.75,50.62 3,5.2"
+         id="path18"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 40.38,55.02 1.03,2.82"
+         id="path19"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 36.25,56.13 0.53,2.95"
+         id="path20"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 32,53.5 v 6"
+         id="path21"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 27.75,56.13 -0.53,2.95"
+         id="path22"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 23.62,55.02 -1.03,2.82"
+         id="path23"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 21.25,50.62 -3,5.2"
+         id="path24"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 16.25,50.77 -1.93,2.3"
+         id="path25"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 13.23,47.75 -2.3,1.93"
+         id="path26"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 13.38,42.75 -5.2,3"
+         id="path27"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 8.98,40.38 6.16,41.41"
+         id="path28"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 7.87,36.25 4.92,36.78"
+         id="path29"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 10.5,32 h -6"
+         id="path30"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 7.87,27.75 4.92,27.22"
+         id="path31"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 8.98,23.62 6.16,22.59"
+         id="path32"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 13.38,21.25 -5.2,-3"
+         id="path33"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 13.23,16.25 -2.3,-1.93"
+         id="path34"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 16.25,13.23 -1.93,-2.3"
+         id="path35"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.4"
+         d="m 21.25,13.38 -3,-5.2"
+         id="path36"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 23.62,8.98 22.59,6.16"
+         id="path37"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 27.75,7.87 27.22,4.92"
+         id="path38"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 35.24,19.93 1.03,-3.87"
+         id="path39"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 40.84,23.16 2.83,-2.83"
+         id="path40"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 44.07,28.76 3.87,-1.03"
+         id="path41"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 44.07,35.24 3.87,1.03"
+         id="path42"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 40.84,40.84 2.83,2.83"
+         id="path43"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 35.24,44.07 1.03,3.87"
+         id="path44"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 28.76,44.07 -1.03,3.87"
+         id="path45"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 23.16,40.84 -2.83,2.83"
+         id="path46"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="m 19.93,35.24 -3.87,1.03"
+         id="path47"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 19.93,28.76 16.06,27.73"
+         id="path48"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 23.16,23.16 20.33,20.33"
+         id="path49"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="1.8"
+         d="M 28.76,19.93 27.73,16.06"
+         id="path50"
+         style="stroke:#544c1d;stroke-opacity:1" />
+      <path
+         stroke-width="2.2"
+         d="M 28.31,36.73 50.78,7.97"
+         id="path51"
+         style="stroke:#544c1d;stroke-opacity:1" />
     </g>
+    <circle
+       cx="32"
+       cy="32"
+       r="3"
+       fill="#ffffff"
+       stroke="none"
+       id="circle51"
+       style="display:inline;fill:#544c1d" />
+  </g>
+  <metadata
+     id="metadata51">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>ICON_TOOLBAR_MAXIMUS_CUSTOM_PANEL</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
 </svg>
