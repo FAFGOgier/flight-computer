@@ -36,6 +36,7 @@ The `.bat` files use paths relative to their own location. The only machine-spec
 - `flight-computer-panel/` is the MSFS package. The code lives in `html_ui/InGamePanels/FlightComputerPanel/fc/`: `core.js` (pure maths), `units.js`, `scales.js`, `app.js` (shell), `face-calc.js`, `face-wind.js`.
 - Test without MSFS: serve this folder over http (`python -m http.server 8765`) and open `dev/index.html` (the computer) or `dev/test.html` (maths tests, the title says PASSED or FAILED).
 - `deploy.bat stage` builds `dist\flight-computer-panel` (without `Build\`, with a fresh `layout.json` from `MSFSLayoutGenerator.exe`). `deploy.bat` also copies it to the Community folder (`FC_COMMUNITY`, default set in `deploy.bat`).
+- `clean.bat` removes the generated `dist\`, `release\` and `Build\_Temp\` folders.
 - If you change the panel definition (size, icon...), rebuild the SPB with `build.bat` (needs `MSFS_SDK`), it copies the result to `flight-computer-panel\InGamePanels`.
 
 ## Screenshots
