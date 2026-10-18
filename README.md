@@ -47,7 +47,7 @@ The `.bat` files use paths relative to their own location. The only machine-spec
 
 ## History
 
-- I had written a preliminary version of this flight computer in JS, and leave it as is for a while. Then, I asked Claude to finish the job and it did great.
+- I had written a preliminary version of this flight computer in JS, and had left it as is for a while. Then, I asked Claude to finish the job and it did great.
 
 ## About the bymaximus package
 
