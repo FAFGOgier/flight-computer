@@ -18,7 +18,7 @@ This flight computer attempts to keep the spirit of the actual implements, while
 - *Convert*: NM/SM/km, kt/mph/km/h, kg/lb, L/US gal/Imp gal, ft/m, hPa/inHg (plus a C/F stepper). Picking the units turns the disc for you.
 - *TAS*: set pressure altitude and OAT; the disc turns to TAS/CAS. Exact TAS, Mach and density altitude are shown below the analog reading.
 
-**Wind** - rotating compass ring (course under the red index) and a course-up plotting board. Drag the orange dot to set the wind; the dashed circle (radius TAS) around it cuts the track axis at the ground speed, and the blue line gives the wind correction angle.
+**Wind** - rotating compass ring (course under the red index) and a course-up plotting board. Drag the orange dot to set the wind; the dashed circle (radius TAS) around it cuts the track axis at the ground speed, and the blue line gives the wind correction angle. The mouse wheel can be used to set the CAS.
 
 ## Controls (VR friendly)
 - Drag the inner disc, the outer ring (hairline / compass ring) or the board with the mouse.
